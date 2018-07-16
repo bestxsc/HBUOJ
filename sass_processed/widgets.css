@@ -15,7 +15,6 @@
   color: #DD4B38; }
 
 .social {
-  font-size: 1.3em;
   float: right; }
 
 .btn-clipboard {
@@ -83,8 +82,8 @@
         white-space: nowrap; }
 
 ul.pagination a:hover {
-  color: #FFF;
-  background: rgba(0, 0, 0, 0.55); }
+  color: black;
+  background: #f9f8f8; }
 
 ul.pagination {
   display: inline-block;
@@ -107,8 +106,8 @@ ul.pagination {
       padding: 4px 12px;
       line-height: 1.42857;
       text-decoration: none;
-      color: #FFF;
-      background-color: #78909c;
+      color: black;
+      background-color: #f9f8f8;
       border: 1px solid #505050;
       margin-left: -1px; }
   ul.pagination > .disabled-page > a {
@@ -117,7 +116,7 @@ ul.pagination {
     border-color: #282828; }
   ul.pagination > .disabled-page > span {
     color: #888;
-    background-color: #78909c;
+    background-color: #f9f8f8;
     border-color: #505050; }
   ul.pagination > .active-page > a {
     z-index: 2;

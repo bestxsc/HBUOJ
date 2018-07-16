@@ -145,7 +145,6 @@
     #content-right .info-float {
       float: none;
       position: sticky;
-      top: 60px;
       width: 100%; } }
 @media not all and (min-width: 700px) {
   #content-right .info-float {
