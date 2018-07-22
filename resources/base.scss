@@ -66,6 +66,7 @@ table.sortable thead {
   cursor: default;
 }
 
+/*
 th {
   &.tablesorter-headerAsc:after {
     content: " ▴";
@@ -75,6 +76,7 @@ th {
     content: " ▾";
   }
 }
+*/
 
 div {
   &.tablesorter-header-inner {
@@ -95,13 +97,17 @@ hr {
   padding: 0;
 }
 
+/*
 .dashed {
   border-bottom: 1px dashed $border_gray;
 }
+*/
 
+/*
 th {
   vertical-align: middle;
 }
+*/
 
 div.info-float {
   float: right;
@@ -126,7 +132,7 @@ body {
   line-height: 1.231;
   background: $background_light_gray;
   font-family: "Segoe UI", "Lucida Grande", Arial, sans-serif;
-  color: #000;
+  #color: #000;
   height: 100%;
 }
 

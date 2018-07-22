@@ -1,3 +1,10 @@
+.page-title .button{
+  background: #f9f8f8 ;
+  margin-top: 0.7em;
+  box-shadow: 0PX 0PX 0PX 1PX rgba(34, 36, 38, 0.15) inset;
+}
+/*
+
 #problem-table {
   td {
     &.category {
@@ -35,7 +42,6 @@
       white-space: nowrap;
     }
   }
-
   tr {
     transition: background-color linear 0.2s;
 
@@ -44,6 +50,7 @@
     }
   }
 }
+*/
 
 #filter-form {
   vertical-align: top;
@@ -77,6 +84,10 @@
     flex: 26.5%;
     max-width: unset;
     padding-top: 2.25em;
+  }
+  &.button {
+    background: #f9f8f8 !important;
+    //box-shadow: 0PX 0PX 0PX 1PX rgba(34, 36, 38, 0.15) inset;
   }
 }
 

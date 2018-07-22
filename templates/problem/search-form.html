@@ -1,10 +1,11 @@
 <div class="sidebox">
-    <h3>{{ _('Problem search') }} <i class="fa fa-search"></i>
-    </h3>
-    <div class="sidebox-content">
+    <h4 class="ui dividing header">&nbsp;{{ _('Problem search') }}
+        <i class="fa fa-search"></i>
+    </h4>
+    <div class="ui segment">
         <form id="filter-form" name="form" action="" method="get">
             <div>
-                <input id="search" type="text" name="search" value="{{ search_query or '' }}"
+                <input id="search" class="prompt" type="text" name="search" value="{{ search_query or '' }}"
                        placeholder="{{ _('Search problems...') }}">
             </div>
             {% if has_fts %}

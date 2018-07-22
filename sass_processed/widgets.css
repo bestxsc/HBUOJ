@@ -224,10 +224,10 @@ ul.select2-selection__rendered {
   margin: 0.2em 0.4em 0 0; }
 
 .sidebox-content {
-  border: 1px solid #80ACBF;
   border-top: none;
   margin: 0 -5px;
-  padding: 1px 0.5em 3px; }
+  padding: 1px 0.5em 3px;
+  font-size: 1.2em; }
   .sidebox-content.sidebox-table {
     border: none;
     padding: 0; }
@@ -239,6 +239,9 @@ ul.select2-selection__rendered {
   border-top-right-radius: 4px;
   padding: 0 5px !important;
   padding-bottom: 1.5em !important; }
+
+.sidebox .button {
+  background: #f9f8f8; }
 
 .ws-closed {
   position: sticky;
