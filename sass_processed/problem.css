@@ -1,8 +1,8 @@
-.page-title .button {
-  background: #f9f8f8;
+/*.page-title .button{
+  background: #f9f8f8 ;
   margin-top: 0.7em;
-  box-shadow: 0PX 0PX 0PX 1PX rgba(34, 36, 38, 0.15) inset; }
-
+  box-shadow: 0PX 0PX 0PX 1PX rgba(34, 36, 38, 0.15) inset;
+}*/
 /*
 
 #problem-table {
@@ -52,15 +52,9 @@
 }
 */
 #filter-form {
-  vertical-align: top;
   margin-bottom: 0.5em;
   margin-top: 0.75em; }
-  #filter-form a {
-    margin-right: 5px;
-    display: inline-block;
-    vertical-align: middle; }
   #filter-form input {
-    vertical-align: middle;
     margin-bottom: 0.5em; }
   #filter-form label {
     vertical-align: middle; }
@@ -68,55 +62,56 @@
     margin-top: 5px; }
 
 #content-right.problems {
-  flex: 26.5%;
-  max-width: unset;
   padding-top: 2.25em; }
-#content-right.button {
-  background: #f9f8f8 !important; }
 
-#content-left.problems {
-  flex: 73.5%; }
-
+/*
+#content-left {
+  &.problems {
+    flex: 73.5%;
+  }
+}*/
 #search {
   width: 100%;
   height: 2.3em; }
 
-label[for="category"], label[for="type"] {
+/*label[for="category"], label[for="type"] {
   padding-bottom: 0.25em;
-  display: block; }
-
+  display: block;
+}*/
 #category {
   margin-top: 0.5em;
   width: 100%; }
 
-#types {
-  width: 100%; }
-
-span.type-tag {
-  white-space: nowrap; }
-
-ul.problem-list {
+/*#types {
+  width: 100%;
+}*/
+/*span.type-tag {
+  white-space: nowrap;
+}*/
+/*ul.problem-list {
   list-style: none;
   padding-left: 1em;
-  padding-right: 0.5em; }
-  ul.problem-list li {
-    margin-bottom: 0.5em; }
+  padding-right: 0.5em;
 
-.pi-name {
-  font-weight: bold; }
-
-.pi-name:after {
-  content: " "; }
-
-.authors-value {
-  padding-left: 1.5em; }
-
-.lang-name:after {
-  content: ": "; }
-
-.lang-limit {
-  margin-left: 1.5em; }
-
+  li {
+    margin-bottom: 0.5em;
+  }
+}*/
+/*.pi-name {
+  font-weight: bold;
+}*/
+/*.pi-name:after {
+  content: " ";
+}*/
+/*.authors-value {
+  padding-left: 1.5em;
+}*/
+/*.lang-name:after {
+  content: ": ";
+}*/
+/*.lang-limit {
+  margin-left: 1.5em;
+}*/
 .solved-problem-color {
   color: #44AD41; }
 
@@ -126,59 +121,70 @@ ul.problem-list {
 .attempted-problem-color {
   color: orange; }
 
-.submissions-left {
+/*.submissions-left {
   color: black;
   font-weight: 600;
   text-align: center;
-  margin-top: 0.5em; }
-
+  margin-top: 0.5em;
+}*/
+/*
 .no-submissions-left {
-  color: red; }
-
-.pdf-icon {
+  color: red;
+}*/
+/*.pdf-icon {
   position: relative;
-  display: inline-block; }
-  .pdf-icon .pdf-icon-logo {
-    color: #d40e13; }
-  .pdf-icon .pdf-icon-bar {
+  display: inline-block;
+
+  .pdf-icon-logo {
+    color: #d40e13;
+  }
+
+  .pdf-icon-bar {
     height: 0.2em;
     display: block;
     position: absolute;
     top: 0.3em;
     background: #d40e13;
     width: 0.6em;
-    margin-left: -0.15em; }
-
-.license {
+    margin-left: -0.15em;
+  }
+}*/
+/*.license {
   float: left;
-  font-size: 0.85em; }
-  .license a {
+  font-size: 0.85em;
+
+  a {
     color: gray;
-    text-decoration: none; }
-
-.clarify {
-  float: right; }
-
-@media (max-width: 550px) {
+    text-decoration: none;
+  }
+}*/
+/*.clarify {
+  float: right;
+}*/
+/*@media (max-width: 550px) {
   #problem-table tr :nth-child(6) {
-    display: none; } }
+    display: none;
+  }
+}*/
+/*
 @media (max-width: 450px) {
   #problem-table tr :nth-child(4) {
-    display: none; } }
-@media (max-width: 700px) {
+    display: none;
+  }
+}*/
+/*@media (max-width: 700px) {
   #problem-table tr :nth-child(3) {
-    display: none; } }
+    display: none;
+  }
+}*/
 #problem-table th a {
-  color: inherit;
-  display: block;
   padding: 4px 10px; }
 
-#category, #types {
-  visibility: hidden; }
-
+/*#category, #types {
+  visibility: hidden;
+}*/
 #filter-form .form-label {
-  margin-top: 0.5em;
-  font-style: italic; }
+  margin-top: 0.5em; }
 
 #point-slider {
   margin: 30px 15px 10px;
@@ -200,19 +206,24 @@ ul.problem-list {
     padding: 0 3px;
     font-size: 13px; }
 
-.problem-content {
-  margin-bottom: 1em; }
-
-.problem-nav {
+/*.problem-content {
+  margin-bottom: 1em;
+}*/
+/*.problem-nav {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  line-height: 2.5em; }
-  .problem-nav a {
+  line-height: 2.5em;
+
+  a {
     display: block;
     text-align: center;
-    text-decoration: none; }
-  .problem-nav a:hover {
-    background-color: #eee; }
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: #eee;
+  }
+}*/
 
 /*# sourceMappingURL=problem.css.map */

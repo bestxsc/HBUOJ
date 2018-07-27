@@ -123,7 +123,7 @@ footer {
   bottom: 0;
 }
 
-body {
+/*body {
   position: relative;
   min-height: 100%;
   margin: 0 auto;
@@ -134,15 +134,15 @@ body {
   font-family: "Segoe UI", "Lucida Grande", Arial, sans-serif;
   #color: #000;
   height: 100%;
-}
+}*/
 
-.unselectable {
+/*.unselectable {
   cursor: default;
-}
+}*/
 
-b {
+/*b {
   font-weight: bold;
-}
+}*/
 
 /*------------------------------------------------------------
   Typography
@@ -219,6 +219,7 @@ h6 {
     font-size: 1rem;
   }
 }
+/*
 
 header {
   background: #111;
@@ -229,6 +230,7 @@ header {
   margin-top: -10px;
   padding: 10px 10px 10px 5%;
 }
+*/
 
 
 #user-links {
@@ -430,39 +432,39 @@ nav {
   }
 }
 
-hr {
+/*hr {
   color: rgba(0, 0, 0, 0.2);
-}
+}*/
 
 #content {
   margin: 32px auto auto;
 
   // Header
-  width: 80%;
-  height: 100%;
-  min-height: 25em;
-  display: block;
+  //width: 80%;
+  //height: 100%;
+  //min-height: 25em;
+  //display: block;
 
-  .title {
+  /*.title {
     color: #393630;
-  }
+  }*/
 }
 
 footer {
   text-align: center;
 }
 
-html {
+/*html {
   position: relative;
   height: 100%;
-}
+}*/
 
 a {
   text-decoration: none;
   display: inline;
 }
 
-noscript #noscript {
+/*noscript #noscript {
   font-family: Arial, sans-serif;
   font-size: 111%;
   color: white;
@@ -474,9 +476,9 @@ noscript #noscript {
   right: 0;
   position: fixed;
   z-index: 100;
-}
+}*/
 
-#announcement {
+/*#announcement {
   font-family: Arial, sans-serif;
   font-size: 111%;
   color: white;
@@ -494,11 +496,11 @@ noscript #noscript {
   a {
     color: orange;
   }
-}
+}*/
 
-.time {
+/*.time {
   color: #555;
-}
+}*/
 
 .toggle {
   font-weight: bold;
@@ -587,7 +589,7 @@ noscript #noscript {
   min-height: 100%;
   position: relative;
   margin: 0 auto;
-  background: #f9f8f8;
+  //background: #f9f8f8;
 }
 
 // border-bottom: 1px solid rgb(204, 204, 204)

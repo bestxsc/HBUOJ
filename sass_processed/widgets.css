@@ -1,22 +1,27 @@
-.social i {
-  display: inline;
-  font-size: 1.9em; }
+/*.social i {
+    display: inline;
+    font-size: 1.9em;
+}
 
 .facebook-this, .tweet-this, .gplus-this {
-  display: inline; }
+    display: inline;
+}
 
 .tweet-this i {
-  color: #55ACEE; }
+    color: #55ACEE;
+}
 
 .facebook-this it {
-  color: #133783; }
+    color: #133783;
+}
 
 .gplus-this i {
-  color: #DD4B38; }
+    color: #DD4B38;
+}
 
 .social {
-  float: right; }
-
+    float: right;
+}*/
 .btn-clipboard {
   top: 0;
   right: 0;
