@@ -539,46 +539,73 @@ math {
 @media only screen and (min-width: 760px) and (min-height: 760px) {
   .hero {
     display: flex; } }
+/*
+$table_header_rounding: 6px;
+
 .table {
   border-spacing: 0;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0.5em;
-  background: #FFFFFF; }
-  .table.striped tr:nth-child(even) {
-    background: #f7f7f7; }
-  .table thead th {
-    vertical-align: middle; }
-    .table thead th:first-child {
-      border-top-left-radius: 6px; }
-    .table thead th:last-child {
-      border-top-right-radius: 6px; }
-  .table th {
+  background: #FFFFFF;
+
+  &.striped tr:nth-child(even) {
+    background: #f7f7f7;
+  }
+
+  thead th {
+    vertical-align: middle;
+
+    &:first-child {
+      border-top-left-radius: $table_header_rounding;
+    }
+
+    &:last-child {
+      border-top-right-radius: $table_header_rounding;
+    }
+  }
+
+  th {
     height: 2em;
     color: #FFF;
-    background-color: #78909c;
+    background-color: $widget_black;
     padding: 4px 10px;
     vertical-align: middle;
     text-align: center;
     white-space: nowrap;
     font-weight: 600;
-    font-size: 1.1em; }
-    .table th:first-child {
-      border-top-left-radius: 6px; }
-    .table th:last-child {
-      border-top-right-radius: 6px; }
-  .table td {
+    font-size: 1.1em;
+
+    &:first-child {
+      border-top-left-radius: $table_header_rounding;
+    }
+
+    &:last-child {
+      border-top-right-radius: $table_header_rounding;
+    }
+  }
+
+  td {
     padding: 7px 5px;
     vertical-align: middle;
-    text-align: center; }
-  .table tr:not(:first-child) th {
-    border-radius: 0; }
-  .table tr:last-child th {
-    border-bottom-left-radius: 6px; }
-  .table thead tr th {
-    border-bottom-left-radius: 0 !important; }
+    text-align: center;
+  }
 
+  // Monkey-patches for awkward table rounding
+  tr:not(:first-child) th {
+    border-radius: 0;
+  }
+
+  tr:last-child th {
+    border-bottom-left-radius: $table_header_rounding;
+  }
+
+  thead tr th {
+    border-bottom-left-radius: 0 !important;
+  }
+}
+*/
 /*
 .mwe-math-mathml-inline {
   display: inline !important;
@@ -993,6 +1020,9 @@ img.inline-math {
     background-color: #eee;
   }
 }*/
+/*
+主要配置排名界面的字体，字体颜色，图标与界面格式
+*/
 .admin a, .admin {
   color: black !important;
   font-weight: bold !important; }
@@ -1625,56 +1655,87 @@ table.user-info-page > tbody > tr > td {
         text-decoration: none;
         white-space: nowrap; }
 
+/*
 ul.pagination a:hover {
-  color: black;
-  background: #f9f8f8; }
+    color: black;
+    background: #f9f8f8;
+}
 
 ul.pagination {
-  display: inline-block;
-  padding-left: 0;
-  margin: 0;
-  border-radius: 4px; }
-  ul.pagination > li {
-    display: inline; }
-    ul.pagination > li:first-child > a, ul.pagination > li:first-child > span {
-      margin-left: 0;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px; }
-    ul.pagination > li:last-child > a, ul.pagination > li:last-child > span {
-      margin-left: 0;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px; }
-    ul.pagination > li > a, ul.pagination > li > span {
-      position: relative;
-      float: left;
-      padding: 4px 12px;
-      line-height: 1.42857;
-      text-decoration: none;
-      color: black;
-      background-color: #f9f8f8;
-      border: 1px solid #505050;
-      margin-left: -1px; }
-  ul.pagination > .disabled-page > a {
-    color: #888;
-    background-color: #78909c;
-    border-color: #282828; }
-  ul.pagination > .disabled-page > span {
-    color: #888;
-    background-color: #f9f8f8;
-    border-color: #505050; }
-  ul.pagination > .active-page > a {
-    z-index: 2;
-    color: #FFF;
-    background-color: #38ACDF;
-    border-color: transparent;
-    cursor: default; }
-  ul.pagination > .active-page > span {
-    z-index: 2;
-    color: #FFF;
-    background-color: #38ACDF;
-    border-color: transparent;
-    cursor: default; }
+    display: inline-block;
+    padding-left: 0;
+    margin: 0;
+    border-radius: $widget_border_radius;
 
+    > {
+        li {
+            display: inline;
+
+            &:first-child > {
+                a, span {
+                    margin-left: 0;
+                    border-top-left-radius: $widget_border_radius;
+                    border-bottom-left-radius: $widget_border_radius;
+                }
+            }
+
+            &:last-child > {
+                a, span {
+                    margin-left: 0;
+                    border-top-right-radius: $widget_border_radius;
+                    border-bottom-right-radius: $widget_border_radius;
+                }
+            }
+
+            > {
+                a, span {
+                    position: relative;
+                    float: left;
+                    padding: 4px 12px;
+                    line-height: 1.42857;
+                    text-decoration: none;
+                    color: black;
+                    background-color: #f9f8f8;
+                    border: 1px solid #505050;
+                    margin-left: -1px;
+                }
+            }
+        }
+
+        .disabled-page > {
+            a {
+                color: #888;
+                background-color: $widget_black;
+                border-color: #282828;
+            }
+
+            span {
+                color: #888;
+                background-color: #f9f8f8;
+                border-color: #505050;
+            }
+        }
+
+        .active-page > {
+            a {
+                z-index: 2;
+                color: #FFF;
+                background-color: $highlight_blue;
+                border-color: transparent;
+                cursor: default;
+            }
+
+            span {
+                z-index: 2;
+                color: #FFF;
+                background-color: $highlight_blue;
+                border-color: transparent;
+                cursor: default;
+            }
+        }
+    }
+}
+*/
 .alert {
   padding: 15px;
   margin-bottom: 20px;
@@ -2193,16 +2254,27 @@ label[for="language"], label[for="status"] {
   }
 }
 */
-#ticket-list td.problem {
-  text-align: left;
-  padding-left: 1em;
-  width: 50%; }
-#ticket-list td.users {
-  text-align: center;
-  white-space: nowrap; }
-#ticket-list td.assignees {
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis; }
+/*
+#ticket-list {
+  td {
+    &.problem {
+      text-align: left;
+      padding-left: 1em;
+      width: 50%;
+    }
+
+    &.users {
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    &.assignees {
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+*/
 
 /*# sourceMappingURL=style.css.map */
