@@ -23,8 +23,6 @@
     </script>
 {% endblock %}
 
-
-
 {% block title_row %}
     {% set tab = 'problems' %}
     {% include "user/user-tabs.html" %}
@@ -32,7 +30,7 @@
 
 {% block user_content %}
     {% if pp_breakdown %}
-        <h3 class="pp-breakdown-header">{{ _('Points Breakdown') }}</h3>
+        <h4 class="pp-breakdown-header">{{ _('Points Breakdown') }}</h4>
         <table id="submissions-table" class="pp-table table">
             <colgroup>
                 <col class="sub-result">
@@ -52,9 +50,9 @@
 
     {% if authored %}
         <div class="user-problem-group">
-            <h3 class="unselectable toggle closed">
+            <h4 class="unselectable toggle closed">
                 <span class="fa fa-chevron-right fa-fw"></span>{{ _('Authored Problems') }} ({{ authored|length }})
-            </h3>
+            </h4>
             <table style="display: none" class="ui table toggled">
                 <thead>
                 <tr>
@@ -94,9 +92,9 @@
 
     {% for group in best_submissions %}
         <div class="user-problem-group">
-            <h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>
+            <h4 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>
                 {{ group.name }} ({{ _('%(points).1f points', points=group.points) }})
-            </h3>
+            </h4>
             <table style="display: none" class="ui table toggled">
                 <thead>
                 <tr>

@@ -37,40 +37,53 @@
 
 {% block body %}
     <div class="ui segment">
-        <table class="user-info-page">
-            <tr>
-                <td style="padding-left:1em; width: 20%; text-align: center;">
-                    <div class="user-gravatar">
-                        <img src="{{ gravatar(user, 135) }}" width="135px" height="135px">
+        <div class="ui container">
+            <div class="ui centered grid">
+                <div class="row">
+                    <div class="four wide column">
+                        <div class="ui basic segment">
+                            <img class="ui small centered circular image" src="{{ gravatar(user, 135) }}">
+                            <h2 class="ui centered header">
+                                {{ content_title or title }}
+                                <div class="sub header">
+                                    {{ content_title or title }}
+                                </div>
+                            </h2>
+                        </div>
+                        <a class="ui teal image label">
+                            {{ _('Total points:') }}
+                            <div class="detail">{{ user.performance_points|floatformat(0) }}</div>
+                        </a>
+                        {% if ratings %}
+                               <a class="ui black image label">
+                                   {{ _('Volatility:') }}
+                                   <div class="detail">{{ rating.volatility }}</div>
+                               </a>
+                        {% endif %}
+                        <a class="ui green image label">
+                                {{ _('Rank by points:') }}
+                                <div class="detail">#{{ rank }}</div>
+                            </a>
+                       {% if ratings %}
+                            <a class="ui blue image label">
+                                {{ _('Rank by rating:') }}
+                            <div class="detail">#{{ rating_rank }}</div>
+                            </a>
+                            <a class="ui yellow image label">
+                                {{ _('Max rating:') }}
+                                <div class="detail">{{ rating_number(max_rating) }}</div>
+                            </a>
+                           <a class="ui purple image label">
+                                {{ _('Min. rating:') }}
+                                <div class="detail">{{ rating_number(min_rating) }}</div>
+                            </a>
+                        {% endif %}
                     </div>
-                    <br>
-
-                    <div><b>{{ _('%(count)d problems solved', count=user.problem_count) }}</b></div>
-
-                    <div><b class="semibold">{{ _('Rank by points:') }}</b> #{{ rank }}</div>
-                    <div>
-                        <b class="semibold">{{ _('Total points:') }}</b>
-                        <span title="{{ user.performance_points|floatformat(2) }}">
-                        {{ user.performance_points|floatformat(0) }}
-                    </span>
+                    <div class="twelve wide column">
+                        <div class="user-content">{% block user_content %}{% endblock %}</div>
                     </div>
-                    <br>
-                    <div>
-                        <a href="{{ url('all_user_submissions', user.user.username) }}">{{ _('View submissions') }}</a>
-                    </div>
-
-                    {% if ratings %}
-                        <br>
-                        <div><b>{{ ratings|length }} contests written</b></div>
-                        <div><b class="semibold">{{ _('Rank by rating:') }}</b> #{{ rating_rank }}</div>
-                        <div><b class="semibold">{{ _('Rating:') }}</b> {{ rating_number(rating) }}</div>
-                        <div><b class="semibold">{{ _('Volatility:') }}</b> {{ rating.volatility }}</div>
-                        <div><b class="semibold">{{ _('Min. rating:') }}</b> {{ rating_number(min_rating) }}</div>
-                        <div><b class="semibold">{{ _('Max rating:') }}</b> {{ rating_number(max_rating) }}</div>
-                    {% endif %}
-                </td>
-                <td class="user-content">{% block user_content %}{% endblock %}</td>
-            </tr>
-        </table>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
